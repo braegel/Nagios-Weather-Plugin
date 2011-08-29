@@ -7,11 +7,13 @@ begin
   nagios_value = 3
   current=Hash.new
 
-  # Adapt this to your needs                  ^^^^^^
-  # Inofficial API documentation http://www.hackthenet.de/weblog/225/google-wetter-api
 
   # get the XML data as a string
   xml_data = Net::HTTP.get_response(URI.parse('http://www.google.com/ig/api?weather=Dueren')).body
+  # Adapt this to your needs ->    ->    ->     ->     ->     ->                    ^^^^^^
+  # Inofficial API documentation http://www.hackthenet.de/weblog/225/google-wetter-api
+
+  #That was the most tricky part:
   xml_data = xml_data.encode("utf-8", "iso-8859-1")
   #p xml_data
 
