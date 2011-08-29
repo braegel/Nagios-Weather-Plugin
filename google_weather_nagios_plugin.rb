@@ -94,8 +94,8 @@ begin
       nagios_value = 2
   end
   
-  p current
-  puts "=> #{nagios_value}"
+  
+  puts "#{current} => #{nagios_value}"
   
   exit nagios_value
   
