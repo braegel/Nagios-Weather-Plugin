@@ -30,68 +30,68 @@ begin
 
 
   if current['icon']=~/\/sunny.gif$/
-    nagios_value = 1
+    nagios_value = 0
   end
   if current['icon']=~/\/chance_of_rain.gif$/
-    nagios_value = 2
+    nagios_value = 1
   end
   if current['icon']=~/\/mostly_sunny.gif$/
-    nagios_value = 1
+    nagios_value = 0
   end
   if current['icon']=~/\/partly_cloudy.gif$/
-    nagios_value = 1
+    nagios_value = 0
   end
   if current['icon']=~/\/mostly_cloudy.gif$/
-    nagios_value = 1
+    nagios_value = 0
   end
   if current['icon']=~/\/chance_of_storm.gif$/
-    nagios_value = 3
+    nagios_value = 1
   end
   if current['icon']=~/\/chance_of_snow.gif$/
-    nagios_value = 2
+    nagios_value = 1
   end
   if current['icon']=~/\/cloudy.gif$/
-    nagios_value = 1
+    nagios_value = 0
   end
   if current['icon']=~/\/mist.gif$/
-    nagios_value = 1
+    nagios_value = 0
   end
   if current['icon']=~/\/storm.gif$/
-    nagios_value = 3
+    nagios_value = 2
   end
   if current['icon']=~/\/thunderstorm.gif$/
-    nagios_value = 3
+    nagios_value = 2
   end
   if current['icon']=~/\/chance_of_tstorm.gif$/
-    nagios_value = 2
+    nagios_value = 1
   end
   if current['icon']=~/\/sleet.gif$/
-    nagios_value = 3
-  end
-  if current['icon']=~/\/snow.gif$/
-    nagios_value = 3
-  end
-  if current['icon']=~/\/icy.gif$/
-    nagios_value = 3
-  end
-  if current['icon']=~/\/dust.gif$/
     nagios_value = 2
   end
+  if current['icon']=~/\/snow.gif$/
+    nagios_value = 2
+  end
+  if current['icon']=~/\/icy.gif$/
+    nagios_value = 2
+  end
+  if current['icon']=~/\/dust.gif$/
+    nagios_value = 0
+  end
   if current['icon']=~/\/fog.gif$/
-    nagios_value = 1
+    nagios_value = 0
   end
   if current['icon']=~/\/smoke.gif$/
     nagios_value = 3
   end
   if current['icon']=~/\/haze.gif$/
-    nagios_value = 1
+    nagios_value = 0
   end
   if current['icon']=~/\/flurries.gif$/
     nagios_value = 3
   end
   
   if current['temp_c'].to_f<1
-      nagios_value = 2
+      nagios_value = 1
   end
   
   
