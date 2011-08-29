@@ -28,7 +28,6 @@ begin
   # rules for nagios status (0 - all ok 1 - warning 2 - critical 3 - unknown)
   # maybe you would like to refere to this: http://www.blindmotion.com/2009/03/google-weather-api-images/
 
-  p current
 
   if current['icon']=~/\/sunny.gif$/
     nagios_value = 1
@@ -91,10 +90,13 @@ begin
     nagios_value = 3
   end
   
-  if current['temp_c'].to_f<=1
+  if current['temp_c'].to_f<1
       nagios_value = 2
   end
-    
+  
+  
+  puts "#{current} => #{nagios_value}"
+  
   exit nagios_value
   
 rescue NoMemoryError => e
