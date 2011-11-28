@@ -35,6 +35,9 @@ begin
   if current['icon']=~/\/chance_of_rain.gif$/
     nagios_value = 1
   end
+  if current['icon']=~/\/rain.gif$/
+    nagios_value = 2
+  end
   if current['icon']=~/\/mostly_sunny.gif$/
     nagios_value = 0
   end
